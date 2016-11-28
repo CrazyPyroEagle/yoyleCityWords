@@ -9,7 +9,7 @@ int cityLoc = 84;
 
 int full = 0; // <---CHANGED!
 int camMode = 1; // <---CHANGED! //0 = move around, 1 = follow track
-float slope = 1;
+float slope = 1; // default: 120
 
 PImage bb;
 float xoff = 0.0;
@@ -29,7 +29,7 @@ int buildingCount3 = 3;
 Building [][][] city2 = new Building[h][w][buildingCount];
 float[][][] ripple = new float[h][w][10];
 int[][][] tileColors = new int[h][w][3];
-float[][] treeTileColors = new float[h*2][w*2];
+float[][] treeTileColors = new float[h*treeRes][w*treeRes]; // Replaced (accidental?) inlined constant
 float minH = 1000;
 float maxH = -1000;
 float minH2 = 1000;
